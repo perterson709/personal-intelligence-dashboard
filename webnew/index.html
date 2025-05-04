@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Intelligence Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🧠 My Personal Intelligence Dashboard</h1>
+    <nav>
+      <button onclick="showSection('mind')">Mind</button>
+      <button onclick="showSection('tools')">Tools</button>
+      <button onclick="showSection('logs')">Logs</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="mind">
+      <h2>🧠 Daily Mindset</h2>
+      <input type="text" id="mindsetInput" placeholder="Type your mindset...">
+      <button onclick="saveMindset()">Save</button>
+      <p id="savedMindset"></p>
+    </section>
+
+    <section id="tools" style="display:none;">
+      <h2>⚙️ Tools I Use</h2>
+      <ul>
+        <li>Notion - For notes</li>
+        <li>ChatGPT - My AI co-pilot</li>
+        <li>VS Code - Code editor</li>
+      </ul>
+    </section>
+
+    <section id="logs" style="display:none;">
+      <h2>📓 Daily Log</h2>
+      <textarea id="logInput" placeholder="Write your log..."></textarea>
+      <button onclick="saveLog()">Save Log</button>
+      <p id="savedLog"></p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
